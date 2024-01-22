@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #024d62;
+}
+form {
+    display: grid;
+    gap: 10px;
+}
+
+#inscribir {
+    padding: 10px;
+    background-color:#11620bf6;
+    color: #fafbfa;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#calificaciones{
+    padding: 10px;
+    background-color:#024d62;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#iniciarSesion{
+    padding: 10px;
+    background-color:#047898;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    cursor: pointer;
+    font-weight: bold;}
+
+#inscribir:hover {
+    background-color: #101111;
+}
+#calificaciones:hover {
+    background-color: #000000;
+}
+#iniciarSesion:hover {
+    background-color: #000000;
+}
+
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
