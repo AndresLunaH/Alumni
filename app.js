@@ -54,16 +54,16 @@ function enrollStudent() {
 
 // Function to assign grades to a student
 function assignGrades() {
-    var selectedStudent = prompt("Enter the name of the student to assign grades:");
+    var selectedStudent = prompt("Agregar el nombre del estudiante al que calificar:");
     var student = findStudentByName(selectedStudent);
 
     if (student) {
-        var subject = prompt("Enter the subject to assign grades:");
-        var grade = prompt("Enter the grade for the subject:");
+        var subject = prompt("Agregar materia a la que se le asignará calificación:");
+        var grade = prompt("Agregar la calificación de la materia:");
         student.ratings.push(`${subject}: ${grade}`);
         displayStudents();
     } else {
-        alert("Student not found!");
+        alert("Estudiante no encontrado");
     }
 }
 
@@ -106,7 +106,7 @@ function findStudentBySurname(surname) {
 
 // Function to get a student's average rating
 function getStudentAverage() {
-    var selectedStudent = prompt("Enter the name of the student to get the average rating:");
+    var selectedStudent = prompt("Escribe el nombre del estudiante al que se obtendrá el promedio:");
     var student = findStudentByName(selectedStudent);
 
     if (student) {
@@ -123,12 +123,12 @@ function getStudentAverage() {
 
         if (gradeCount > 0) {
             var average = totalGrades / gradeCount;
-            alert(`${student.name}'s average rating: ${average.toFixed(2)}`);
+            alert(`${student.name}' tiene un promedió de: ${average.toFixed(2)}`);
         } else {
-            alert(`${student.name} has no valid ratings.`);
+            alert(`${student.name} No tiene calificaciones validas.`);
         }
     } else {
-        alert("Student not found!");
+        alert("Estudiante no encontrado");
     }
 }
 
@@ -149,9 +149,9 @@ function getGroupAverage() {
 
     if (gradeCount > 0) {
         var average = totalGrades / gradeCount;
-        alert(`Group average rating: ${average.toFixed(2)}`);
+        alert(`El promedio del grupo es: ${average.toFixed(2)}`);
     } else {
-        alert("The group has no valid ratings.");
+        alert("El grupo no tiene promedio valido.");
     }
 }
 
