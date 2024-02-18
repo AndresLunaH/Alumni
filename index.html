@@ -3,59 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
+    <title>Sistema de registro de alumnos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Student Management System</h1>
+        <h1>Sistema de registro de alumnos</h1>
 
         <!-- Registration Form -->
         <form id="registrationForm">
-            <label for="name">Name:</label>
+            <label for="name">Nombre:</label>
             <input type="text" id="name" required>
 
-            <label for="surname">Surname:</label>
+            <label for="surname">Apellido:</label>
             <input type="text" id="surname" required>
 
-            <label for="age">Age:</label>
+            <label for="age">Edad:</label>
             <input type="number" id="age" required>
 
-            <button type="button" onclick="registerStudent()">Register Student</button>
+            <button type="button" onclick="registerStudent()">Registrar estudiante</button>
         </form>
 
         <!-- Student Management Functions -->
-        <button onclick="enrollStudent()">Enroll Student in Class</button>
-        <button onclick="assignGrades()">Assign Grades</button>
-        <button onclick="createGroups()">Create Groups</button>
+        <button onclick="enrollStudent()">Enrollar estudiante a una clase</button>
+        <button onclick="assignGrades()">Asignar calificaciones</button>
+        <button onclick="createGroups()">Crear grupo</button>
 
         <!-- Display Section -->
         <div id="displaySection" style="display: none;">
-            <h2>Student Information</h2>
+            <h2>Información del estudiante  </h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Age</th>
-                        <th>Registered Subjects</th>
-                        <th>Ratings</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Registrar Materias</th>
+                        <th>calificaciones</th>
                     </tr>
                 </thead>
                 <tbody id="studentTableBody"></tbody>
             </table>
 
             <!-- Additional Functions -->
-            <button onclick="searchByName()">Search by Name</button>
-            <button onclick="searchBySurname()">Search by Surname</button>
-            <button onclick="getStudentAverage()">Get Student Average</button>
-            <button onclick="getGroupAverage()">Get Group Average</button>
-            <button onclick="sortStudentsByGrade(true)">Sort Students Ascending by Grade</button>
-            <button onclick="sortStudentsByGrade(false)">Sort Students Descending by Grade</button>
+            <button onclick="searchByName()">Buscar por nombre</button>
+            <button onclick="searchBySurname()">Buscar por apellido</button>
+            <button onclick="getStudentAverage()">Obtener promedio del estudiante</button>
+            <button onclick="getGroupAverage()">Obtener promedio del grupo</button>
+            <button onclick="sortStudentsByGrade(true)">Ordenar por calificación ascendente</button>
+            <button onclick="sortStudentsByGrade(false)">Ordenar por calificación descendente</button>
 
             <!-- Extra Point: Additional Sorting/Search Function -->
-            <button onclick="extraFunction()">Extra Function</button>
+            <button onclick="extraFunction()">Función extra</button>
         </div>
     </div>
 
