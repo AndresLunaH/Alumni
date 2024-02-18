@@ -40,15 +40,15 @@ function displayStudents() {
 
 // Function to enroll a student in a class
 function enrollStudent() {
-    var selectedStudent = prompt("Enter the name of the student to enroll:");
+    var selectedStudent = prompt("Agregué el nombre del alumno a inscribir a curso:");
     var student = findStudentByName(selectedStudent);
 
     if (student) {
-        var subject = prompt("Enter the subject to enroll in:");
+        var subject = prompt("Agregar la materia a la que se inscribe:");
         student.registeredSubjects.push(subject);
         displayStudents();
     } else {
-        alert("Student not found!");
+        alert("Estudiante no encontrado");
     }
 }
 
