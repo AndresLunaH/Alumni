@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Information</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Información del estudiante</h1>
-        <form id="studentForm">
-            <label for="firstName"> Nombre:</label>
-            <input type="text" id="firstName" placeholder="Nombre" required>
+        <h1>Student Management System</h1>
 
-            <label for="lastName">Apellido:</label>
-            <input type="text" id="lastName" placeholder="Apellido" required>
+        <!-- Registration Form -->
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
 
-            <label for="age">Edad:</label>
-            <input type="number" id="age" placeholder="Edad" required>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" required>
 
-            <label for="assignments">Materias:</label>
-            <input type="text" id="assignments" placeholder="Materias" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
 
-            <label for="grades">Calificaciones:</label>
-            <input type="number" id="grades" placeholder="Calificaciones" required>
-
-            <button type="button" id="inscribir" onclick="submitForm()">INSCRIBIR</button>
-            <button type="button" id="calificaciones" onclick="submitForm()"> VER CALIFICACIONES</button>
-            <button type="button" id="iniciarSesion" onclick="submitForm()">INICIAR SESIÓN</button>
+            <button type="button" onclick="registerStudent()">Register Student</button>
         </form>
 
-        <div id="result"></div>
+        <!-- Student Management Functions -->
+        <button onclick="enrollStudent()">Enroll Student in Class</button>
+        <button onclick="assignGrades()">Assign Grades</button>
+        <button onclick="createGroups()">Create Groups</button>
+
+        <!-- Display Section -->
+        <div id="displaySection" style="display: none;">
+            <h2>Student Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>Registered Subjects</th>
+                        <th>Ratings</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+            </table>
+
+            <!-- Additional Functions -->
+            <button onclick="searchByName()">Search by Name</button>
+            <button onclick="searchBySurname()">Search by Surname</button>
+            <button onclick="getStudentAverage()">Get Student Average</button>
+            <button onclick="getGroupAverage()">Get Group Average</button>
+            <button onclick="sortStudentsByGrade(true)">Sort Students Ascending by Grade</button>
+            <button onclick="sortStudentsByGrade(false)">Sort Students Descending by Grade</button>
+
+            <!-- Extra Point: Additional Sorting/Search Function -->
+            <button onclick="extraFunction()">Extra Function</button>
+        </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="app.js">
+    </script>
+
 </body>
 </html>
+
